@@ -1,81 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PORTFOLIO</title>
+    <title>Contact - Camille Arnaud</title>
     <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="PLUGINS/scroll-reveal.min.js"></script>
+    <script src="PLUGINS/jquery-3.6.3.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
-        table {
-            background-color: #000000;
-            border-collapse: collapse;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            color: rgb(222, 250, 250);
-            margin: auto;
-            width: 80%;
+        /* Styles pour la page Contact */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: rgba(255, 255, 255, 0.9);
+            background-color: #1a1a1a;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        nav {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .contact-container {
             max-width: 600px;
-            margin-top: 150px;
+            padding: 30px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
 
-        td {
-            padding: 10px;
-            text-align: left;
-            vertical-align: top;
-        }
-
-        input,
-        textarea {
-            background-color: transparent;
-            border: none;
-            border-bottom: 1px solid white;
-            color: white;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            margin: 5px 0;
-            padding: 5px;
-            width: 100%;
-
-        }
-
-        textarea#message {
-            height: 200px;
-        }
-
-        button[type=submit] {
-            background-color: white;
-            border: none;
-            border-radius: 5px;
-            color: red;
-            cursor: pointer;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            font-weight: bold;
-            padding: 10px;
-            text-transform: uppercase;
-            transition: background-color 0.3s ease;
-            width: 100%;
-        }
-
-        button[type=submit]:hover {
-            background-color: rgba(255, 255, 255, 0.8);
-        }
-
-        caption {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            color: rgb(222, 250, 250);
-            font-size: larger;
+        .contact-container h2 {
+            font-size: 2em;
             margin-bottom: 20px;
+            color: white;
+        }
 
+        .contact-info {
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
 
+        .contact-info a {
+            color: #4da6ff;
+            text-decoration: none;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .contact-info a:hover {
+            color: #fff;
+            background-color: #4da6ff;
+        }
+
+        .contact-info i {
+            font-size: 1.5em;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 10px;
+            color: white;
+            font-size: 0.9em;
         }
     </style>
 </head>
 
-
-<header>
-    <h1>Camille Arnaud</h1>
-
+<body>
     <nav id="nav">
         <ul>
             <li><a href="index.html">Portfolio</a></li>
@@ -83,44 +92,38 @@
             <li><a href="Contact.html">Contact</a></li>
         </ul>
     </nav>
-</header>
 
-<body>
-    <h2>Contactez moi !</h2>
-    <t> camillearnd@icloud.com</t>
+    <main>
+        <div class="contact-container">
+            <h2>Me contacter</h2>
+            <p>N'hésitez pas à me joindre via les coordonnées ci-dessous.</p>
 
-    <!-- 
-        <table>
-        <caption>Contactez-moi !</caption>
-        <form action="envoyer-email.php" method="post">
-            <tr>
-                <td><label for="nom">Nom :</label></td>
-                <td><input type="text" id="nom" name="nom" required></td>
-            </tr>
-            <tr>
-                <td><label for="Prénom">Prénom :</label></td>
-                <td><input type="text" id="Prénom" name="Prénom" required></td>
-            </tr>
-            <tr>
-                <td><label for="email">Adresse e-mail :</label></td>
-                <td><input type="email" id="email" name="email" required></td>
-            </tr>
-            <tr>
-                <td><label for="entreprise">Entreprise :</label></td>
-                <td><input type="text" id="entreprise" name="entreprise"></td>
-            </tr>
-            <tr>
-                <td colspan="2"><label for="message">Message :</label></td>
-            </tr>
-            <tr>
-                <td colspan="2"><textarea id="message" name="message" required></textarea></td>
-            </tr>
-            <tr>
-                <td colspan="2"><button type="submit">Envoyer</button></td>
-            </tr>
-        </form>
-        </table> 
-    -->
+            <div class="contact-info">
+                <a href="mailto:camille.arnaud@email.com">
+                    <i class="fas fa-envelope"></i> camillearnd@icloud.com
+                </a>
+            </div>
+
+            <div class="contact-info">
+                <a href="tel:+33123456789">
+                    <i class="fas fa-phone-alt"></i> 06 16 01 36 57
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Camille Arnaud. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        ScrollReveal().reveal('.contact-container', {
+            delay: 200,
+            duration: 2000,
+            origin: 'bottom',
+            distance: '50px'
+        });
+    </script>
 </body>
 
 </html>

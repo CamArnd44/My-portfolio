@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photographie Numérique</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="PLUGINS/scroll-reveal.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+
+<body>
+
+    <!-- Nom discret en haut à gauche -->
+    <div id="nom">Camille Arnaud</div>
+
+    <!-- Navigation -->
+    <nav id="nav">
+        <ul>
+            <li><a href="index.html">Portfolio</a></li>
+            <li><a href="Bio.html">Bio</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <h1>Photographie Numérique</h1>
+
+    <!-- Catégories principales -->
+    <div class="categories">
+        <div class="box" data-target="portrait">
+            <img src="images/shooting_sept22-1.jpg" alt="Portrait">
+            <div class="overlay"><p>Portrait</p></div>
+        </div>
+        <div class="box" data-target="paysage">
+            <img src="images/bosnie.jpg" alt="Paysage">
+            <div class="overlay"><p>Paysage</p></div>
+        </div>
+        <div class="box" data-target="collectif">
+            <img src="images/couv.jpeg" alt="Collectif">
+            <div class="overlay"><p>Collectif Eternel Techno</p></div>
+        </div>
+    </div>
+
+    <!-- Collections -->
+    <div id="portrait" class="collection">
+        <div class="close">
+            <button>Fermer</button>
+        </div>
+        <h2>Portrait</h2>
+        <div class="collection-grid">
+            <img src="images/shooting_sept22.jpg" alt="Portrait 1">
+            <img src="images/armaury.jpg" alt="Portrait 2">
+            <img src="images/portait.jpg" alt="Portrait 3">
+            <img src="images/IMG_3979.jpeg" alt="Portrait 4">
+            <img src="images/IMG_3151.jpeg" alt="Portrait 5">
+            <img src="images/shooting_sept22-1.jpg" alt="Portrait 6">
+        </div>
+    </div>
+
+    <div id="paysage" class="collection">
+        <div class="close">
+            <button>Fermer</button>
+        </div>
+        <h2>Paysage</h2>
+        <div class="collection-grid">
+            <img src="images/paris.jpg" alt="Paysage 1">
+            <img src="images/londres.jpg" alt="Paysage 2">
+            <img src="images/IMG_2413.jpeg" alt="Paysage 3">
+            <img src="images/bosnie.jpg" alt="Paysage 4">
+            <img src="images/Paris-2.jpg" alt="Paysage 5">
+            <img src="images/Hossegor.jpg" alt="Paysage 6">
+            <img src="images/Paris-1.jpg" alt="Paysage 7">
+        </div>
+    </div>
+
+    <div id="collectif" class="collection">
+        <div class="close">
+            <button>Fermer</button>
+        </div>
+        <h2>Collectif ETERNEL TECHNO</h2>
+        <div class="collection-grid">
+            <img src="images/in_1.jpg" alt="Collectif 1">
+            <img src="images/out_1.jpg" alt="Collectif 2">
+            <img src="images/in_2.jpg" alt="Collectif 3">
+            <img src="images/in_5.jpg" alt="Collectif 4">
+            <img src="images/in_4.jpg" alt="Collectif 5">
+            <img src="images/out_2.jpg" alt="Collectif 6">
+            <img src="images/in_3.jpg" alt="Collectif 7">
+            <img src="images/in_6.jpg" alt="Collectif 8">
+            <img src="images/in_7-1.jpg" alt="Collectif 9">
+        </div>
+    </div>
+
+    <!-- jQuery Script -->
+    <script>
+        $(document).ready(function () {
+            $('.box').on('click', function () {
+                const target = $(this).data('target');
+                $('.categories').hide();
+                $("#" + target).fadeIn();
+            });
+
+            $('.close button').on('click', function () {
+                $('.collection').hide();
+                $('.categories').fadeIn();
+            });
+        });
+    </script>
+
+</body>
+
+</html>
